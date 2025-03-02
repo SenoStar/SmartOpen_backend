@@ -7,7 +7,7 @@ Win 11
 Перейти в директорию с manage.py
 
 В терминале git bash прописать:
-````
+```sh
 source .venv/Scripts/activate
 ```
 
