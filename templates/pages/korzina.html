@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/pages/korzina/style.css' %}">
+{% endblock %}
+{% block title_of_page %}КОРЗИНА{% endblock %}
+{% block content %}
+      <div class="container">
+        <div class="row">
+          {% for product_in_korzina in products_in_korzina %}
+          <div class="col-xl-6 col-md-12 col-sm-12">
+            <div class="product_wrapper">
+              <img src="{{ product_in_korzina.product.picture_of_product_small.url }}" alt="Продукт №{{ product_in_korzina.product.number_of_product }}">
+              <div class="info_product">
+                <div class="about">
+                  <p>{{ product_in_korzina.product.name }}</p>
+                  <p>Шампунь для автомобиля</p>
+                </div>
+                <div class="about_1">
+                  <div class="price_volume">
+                    <p>{{ product_in_korzina.product.price }} руб.</p>
+                    <p>Объем {{ product_in_korzina.get_volume_display }}</p>
+                  </div>
+                  <div class="button_product">
+                    <button type="button" class="btn btn-secondary">Заказать</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+    </div>
+  </div>
+{% endblock %}

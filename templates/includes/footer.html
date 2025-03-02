@@ -1,0 +1,22 @@
+{% load static %}
+<footer>
+  <div class="container">
+    <div class="fwrapper">
+      <div class="info">
+      <ul>
+        <li><a href="{% url 'pages:about' %}">О компании</a></li>
+        <li><a href="{% url 'pages:catalog' %}">Каталог продукции</a></li>
+        <li><a href="{% url 'pages:cooperation' %}">Сторудничество</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+      </div>
+      <div class="another_info">
+        <ul>
+          <li><a href=""><img src="{% static 'img/header_and_footer/youtube_logo.png' %}" alt=""></a></li>
+          <li>office@pk-vortex.ru</li>
+          <li>8 800 2222-805</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
