@@ -6,6 +6,11 @@ Win 11
 
 Перейти в директорию с manage.py
 
+Создать виртуалку питона:
+```sh
+python -m venv .venv
+```
+
 В терминале git bash прописать:
 ```sh
 source .venv/Scripts/activate
