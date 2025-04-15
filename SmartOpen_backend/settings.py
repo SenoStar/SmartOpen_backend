@@ -3,11 +3,14 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Надо бы убрать в скрытый файл, но лень
 SECRET_KEY = 'django-insecure-^vl*jk+o3ut$(ru4%c(3e*@wgl&zf+pp4zajueg2e@h885_6f@'
 
-DEBUG = True
+# Режим разраба
+DEBUG = False
 
-ALLOWED_HOSTS = []
+# Любые домены
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -55,10 +58,15 @@ WSGI_APPLICATION = 'SmartOpen_backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mydatabase',
+        'USER': 'myuser',
+        'PASSWORD': 'mypassword',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
+
 
 
 # Password validation
